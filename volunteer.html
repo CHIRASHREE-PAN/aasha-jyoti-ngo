@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Volunteer - Aasha Jyoti</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 2rem;
+    }
+
+    .form-box {
+      background-color: #fff9e6;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .form-box:hover {
+      transform: scale(1.01);
+    }
+
+    .form-control:focus {
+      border-color: #f4b400;
+      box-shadow: 0 0 0 0.2rem rgba(244, 180, 0, 0.25);
+    }
+
+    .btn-yellow {
+      background-color: #f4b400;
+      border: none;
+      color: white;
+      font-weight: 600;
+      padding: 0.6rem 1.5rem;
+      border-radius: 8px;
+      transition: background-color 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    .btn-yellow:hover {
+      background-color: #d39e00;
+    }
+
+    footer {
+      background-color: #222;
+      color: #ccc;
+      padding: 2rem 0;
+    }
+
+    footer p {
+      margin-bottom: 0.3rem;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 576px) {
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .form-box {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="./images/Screenshot 2025-08-02 224402.png" alt="Logo" style="height: 55px; border-radius: 50%;" />
+      Aasha Jyoti
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Volunteer</a></li>
+        <li class="nav-item"><a class="btn btn-warning ms-2" href="#">Donate</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Volunteer Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center section-title">Become a Volunteer</h2>
+    <p class="text-center section-subtitle">
+      Join our mission to spread hope and light. Volunteering with Aasha Jyoti means becoming a part of real change.
+    </p>
+
+    <div class="form-box mx-auto" style="max-width: 800px;">
+      <form onsubmit="redirectToGoogleForm(event)">
+        <div class="mb-3">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-control" placeholder="Enter your full name" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-control" placeholder="you@example.com" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" placeholder="Your phone number" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">City</label>
+          <input type="text" class="form-control" placeholder="Your city" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Why do you want to volunteer?</label>
+          <textarea class="form-control" rows="4" placeholder="Share your reason..." required></textarea>
+        </div>
+        <div class="text-center">
+          <button class="btn-yellow" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center">
+  <div class="container">
+    <p>&copy; 2025 Aasha Jyoti. All rights reserved.</p>
+    <p>Email: info@aashajyoti.org | Phone: +91-9830385118</p>
+  </div>
+</footer>
+
+<script>
+  function redirectToGoogleForm(event) {
+    event.preventDefault();
+    alert('Thank you for volunteering! You will now be redirected to our official volunteer form.');
+    window.open("https://forms.gle/irSFyoctNdVo2c1YA", "_blank");
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
